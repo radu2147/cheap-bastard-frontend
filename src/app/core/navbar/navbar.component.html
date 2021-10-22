@@ -1,0 +1,9 @@
+<app-logged-in-navbar *ngIf="loggedIn; else anonymNavbar">
+
+</app-logged-in-navbar>
+
+<ng-template #anonymNavbar>
+    <app-anonymous-navbar>
+        
+    </app-anonymous-navbar>
+</ng-template>

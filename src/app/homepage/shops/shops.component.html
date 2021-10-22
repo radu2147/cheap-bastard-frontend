@@ -1,0 +1,8 @@
+<div class="flex flex-col justify-center items-center mt-12 mb-12">
+    <h1 class="text-5xl font-bold text-gray-800">
+        Shops
+    </h1>
+    <div class="grid  grid-cols-1 lg:grid-cols-4 justify-between items-center gap-40 mt-20" >
+        <img [src]="path" alt="..." *ngFor="let path of paths" class="w-32 h-auto border-none" />
+    </div>
+</div>

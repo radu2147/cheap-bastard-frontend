@@ -1,0 +1,33 @@
+<section class="min-h-screen flex flex-col">
+    <div class="flex flex-1 items-center justify-center">
+        <div class="rounded-lg sm:border-2 px-4 lg:px-24 py-16 lg:max-w-xl sm:max-w-md w-full text-center">
+            <form class="text-center" (ngSubmit)="login()">
+                <h1 class="font-bold tracking-wider text-3xl mb-8 w-full text-gray-600">
+                    Sign in
+                </h1>
+                <div class="py-2 text-left">
+                    <input type="email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" class="bg-gray-200 border-2 border-gray-100 focus:outline-none bg-gray-100 block w-full py-2 px-4 rounded-lg focus:border-gray-800 " placeholder="Email" />
+                </div>
+                <div class="py-2 text-left">
+                    <input type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" class="bg-gray-200 border-2 border-gray-100 focus:outline-none bg-gray-100 block w-full py-2 px-4 rounded-lg focus:border-gray-800 " placeholder="Password" />
+                </div>
+                <div class="py-2">
+                    <button type="submit" href="/" class="border-2 border-gray-100 focus:outline-none bg-gray-800 text-white font-bold tracking-wider block w-full p-2 rounded-lg focus:border-gray-700 hover:bg-gray-900">
+                        Sign In
+                    </button>
+                </div>
+                <div class="mt-2">
+                    <p class="text-red-600" *ngIf="error">
+                        {{error}}
+                    </p>
+                </div>
+            </form>
+            <div class="text-center mt-12">
+                <span>
+                    Don't have an account?
+                </span>
+                <a href="/auth/register" class="font-light text-md text-gray-800 underline font-semibold hover:text-gray-900">Create One</a>
+            </div>
+        </div>
+    </div>
+</section>
