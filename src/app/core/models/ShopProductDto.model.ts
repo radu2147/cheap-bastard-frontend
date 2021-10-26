@@ -5,5 +5,6 @@ export interface ShopProductDto{
     name: string,
     link: string,
     history: Array<PricePerDateDto>,
-    provider: string | null
+    provider: string | null,
+    currentPrice: number | null
 }

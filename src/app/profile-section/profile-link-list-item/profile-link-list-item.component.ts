@@ -16,10 +16,6 @@ export class ProfileLinkListItemComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  get current_price(){
-    return this.el?.history[this.el?.history.length - 1].price;
-  }
   
   get provider(){
     return `/assets/shops/${this.el?.provider}.png`

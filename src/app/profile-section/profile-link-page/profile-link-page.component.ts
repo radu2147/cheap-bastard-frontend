@@ -22,7 +22,8 @@ export class ProfileLinkPageComponent implements OnInit {
     name: '',
     link: '',
     history: [],
-    provider: null
+    provider: null,
+    currentPrice: null
   }
 
   load(){

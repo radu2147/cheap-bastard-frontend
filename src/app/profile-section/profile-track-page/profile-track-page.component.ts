@@ -38,6 +38,7 @@ export class ProfileTrackPageComponent implements OnInit {
     this.transitionService.inProcess();
     this.productService.getProduct(+this.route.snapshot.paramMap.get("id")!!).subscribe(el => {
       this.el = el;
+      this.el.history.sort((a, b) => a.history[a.history.length - 1].price - b.history[b.history.length - 1].price)
       this.transitionService.loading = false;
     },
     (err) => {
